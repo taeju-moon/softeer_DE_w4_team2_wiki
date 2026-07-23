@@ -187,7 +187,7 @@ JFK발 택시 수요(`jfk_zone_stats.csv`, 261개 목적지 Zone)와 JFK 접근 
 ![대중교통 사각지대 상위 목적지](./images/transit_desert_top_zones.png)
 *버스+지하철 모두 고려한 최종 사각지대 상위 목적지 — 맨해튼 도심부가 빠지고 1위는 LaGuardia Airport*
 
-![대중교통 커버리지 최종 지도](./output/jfk_transit_gap_map.png)
+![대중교통 커버리지 최종 지도](./images/transit_coverage_map.png)
 *버스 노선(점선) + 지하철역(사각형, 역 개수 비례) + 대중교통 상태(배경색)를 함께 표시한 최종 지도. 1단계 지도에서 온통 빨갛던 맨해튼이 보라색(지하철만 있음)으로 정리되고, 남은 빨간 원은 JFK 인근 LaGuardia Airport 등 소수 지역으로 좁혀진다.*
 
 ![최종 신규 버스 노선 후보 표](./images/final_candidates_table.png)
