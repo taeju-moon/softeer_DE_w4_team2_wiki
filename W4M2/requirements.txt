@@ -1,20 +1,26 @@
 # Jupyter 컨테이너(분석/시각화)용 추가 패키지
 # master/worker(Spark 클러스터) Dockerfile에는 반영하지 않음 — 역할 분리 참고
+# 버전은 최초 빌드 검증 시 확인된 호환 조합으로 고정
+# (pandas/numpy는 gtfs-kit이 요구하는 pandas>=2.2.2 조건 안에서
+#  베이스 이미지 원래 버전대(2.x/1.24.x)를 유지하도록 고정 — 3.x 자동 업그레이드 방지)
+
+pandas==2.2.3
+numpy==1.24.4
 
 # GTFS 파싱 (routes.txt, stops.txt, stop_times.txt 등)
-gtfs-kit
-partridge
+gtfs-kit==12.2.0
+partridge==1.1.2
 
 # 지리적 클러스터링
-scikit-learn
-geopandas
-shapely
-pyproj
-fiona
+scikit-learn==1.3.1
+geopandas==1.1.4
+shapely==2.1.2
+pyproj==3.7.2
+pyogrio==0.13.0
 
 # Parquet 및 Spark<->pandas 변환
-pyarrow
+pyarrow==13.0.0
 
 # 시각화
-matplotlib
-seaborn
+matplotlib==3.8.0
+seaborn==0.13.0
