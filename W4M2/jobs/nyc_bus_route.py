@@ -17,7 +17,7 @@ JFK 통과 버스 노선 → 커버 존 + 배차간격 JSON 생성기
        "direction": {...} }, ...]
 
 실행:
-  python build_route_zone_json.py \
+  python nyc_bus_route.py \
       --gtfs ./gtfs_q ./gtfs_b ./gtfs_busco \
       --zones ./taxi_zones/taxi_zones.shp \
       --jfk-id 132 \

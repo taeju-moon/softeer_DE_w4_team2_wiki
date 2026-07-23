@@ -26,7 +26,7 @@ from pyspark.sql import functions as F
 # ---------------------------------------------------------------------------
 # 상수
 # ---------------------------------------------------------------------------
-JFK_LOCATION_ID = 132                 # JFK 공항 Zone
+DEFAULT_JFK_LOCATION_ID = 132          # JFK 공항 Zone (taxi_zone_lookup.csv 기준)
 
 # HVFHV 사업자 라이선스 번호 -> 사업자명
 OPERATOR_MAP = {"HV0002": "Juno", "HV0003": "Uber", "HV0004": "Via", "HV0005": "Lyft"}
@@ -40,6 +40,7 @@ def parse_args(argv=None):
     p.add_argument("--data-dir", default="/opt/spark-data", help="parquet 파일들이 있는 디렉터리")
     p.add_argument("--output", default="/opt/spark-output/jfk_zone_stats", help="결과 CSV 출력 경로(디렉토리)")
     p.add_argument("--outlier-pct", type=float, default=1.0, help="상·하위 이상치 컷오프(%)")
+    p.add_argument("--jfk-id", type=int, default=DEFAULT_JFK_LOCATION_ID, help="출발지 Zone LocationID")
     return p.parse_args(argv)
 
 
@@ -111,8 +112,8 @@ def unify(yellow_raw, hvfhv_raw):
 # ---------------------------------------------------------------------------
 # 3. 정제: JFK 필터 -> 결측/논리오류 제거 -> service_type별 이상치 제거
 # ---------------------------------------------------------------------------
-def clean(df, outlier_pct: float):
-    df = df.filter(F.col("pu_location_id") == JFK_LOCATION_ID)
+def clean(df, outlier_pct: float, jfk_id: int):
+    df = df.filter(F.col("pu_location_id") == jfk_id)
     df = df.dropna(subset=["do_location_id", "trip_distance", "fare_amount"])
     df = df.filter((F.col("fare_amount") > 0) & (F.col("trip_distance") > 0))
 
@@ -176,7 +177,7 @@ def main(argv=None):
     hvfhv_raw = spark.read.parquet(hvfhv_glob) if hvfhv_glob else None
     lookup = spark.read.option("header", True).option("inferSchema", True).csv(lookup_path)
 
-    df = clean(unify(yellow_raw, hvfhv_raw), args.outlier_pct)
+    df = clean(unify(yellow_raw, hvfhv_raw), args.outlier_pct, args.jfk_id)
     result = aggregate(df, lookup)
 
     # 목적지 Zone 수(수백 행)라 단일 파일로 저장 (coalesce(1))
