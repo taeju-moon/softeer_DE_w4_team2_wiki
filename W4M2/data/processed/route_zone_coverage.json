@@ -1,0 +1,601 @@
+[
+  {
+    "route_id": "B15",
+    "route_name": "B15",
+    "route_long_name": "Bedford Stuyvesant - JFK AirTrain",
+    "agency": "MTA New York City Transit",
+    "gtfs_source": "gtfs_b",
+    "covered_zones": [
+      {
+        "location_id": 35,
+        "zone": "Brownsville",
+        "borough": "Brooklyn"
+      },
+      {
+        "location_id": 37,
+        "zone": "Bushwick South",
+        "borough": "Brooklyn"
+      },
+      {
+        "location_id": 61,
+        "zone": "Crown Heights North",
+        "borough": "Brooklyn"
+      },
+      {
+        "location_id": 72,
+        "zone": "East Flatbush/Remsen Village",
+        "borough": "Brooklyn"
+      },
+      {
+        "location_id": 76,
+        "zone": "East New York",
+        "borough": "Brooklyn"
+      },
+      {
+        "location_id": 77,
+        "zone": "East New York/Pennsylvania Avenue",
+        "borough": "Brooklyn"
+      },
+      {
+        "location_id": 124,
+        "zone": "Howard Beach",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 132,
+        "zone": "JFK Airport",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 177,
+        "zone": "Ocean Hill",
+        "borough": "Brooklyn"
+      },
+      {
+        "location_id": 180,
+        "zone": "Ozone Park",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 216,
+        "zone": "South Ozone Park",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 225,
+        "zone": "Stuyvesant Heights",
+        "borough": "Brooklyn"
+      }
+    ],
+    "headway_min": {
+      "peak": 4.5,
+      "offpeak": 5.2,
+      "by_hour": {
+        "0": 15.0,
+        "1": 15.0,
+        "2": 7.5,
+        "3": 6.0,
+        "4": 4.3,
+        "5": 3.8,
+        "6": 3.8,
+        "7": 4.3,
+        "8": 5.0,
+        "9": 5.0,
+        "10": 4.3,
+        "11": 3.8,
+        "12": 4.3,
+        "13": 4.3,
+        "14": 3.8,
+        "15": 4.3,
+        "16": 3.3,
+        "17": 4.3,
+        "18": 5.0,
+        "19": 5.0,
+        "20": 5.0,
+        "21": 6.0,
+        "22": 7.5,
+        "23": 10.0
+      }
+    }
+  },
+  {
+    "route_id": "Q06",
+    "route_name": "Q6",
+    "route_long_name": "Jamaica - Sutphin Blvd - Jfk Cargo Area",
+    "agency": "MTA Bus Company",
+    "gtfs_source": "gtfs_busco",
+    "covered_zones": [
+      {
+        "location_id": 10,
+        "zone": "Baisley Park",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 130,
+        "zone": "Jamaica",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 132,
+        "zone": "JFK Airport",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 215,
+        "zone": "South Jamaica",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 218,
+        "zone": "Springfield Gardens North",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 219,
+        "zone": "Springfield Gardens South",
+        "borough": "Queens"
+      }
+    ],
+    "headway_min": {
+      "peak": 6.4,
+      "offpeak": 10.9,
+      "by_hour": {
+        "0": 30.0,
+        "1": 30.0,
+        "2": 30.0,
+        "3": 30.0,
+        "4": 30.0,
+        "5": 10.0,
+        "6": 3.0,
+        "7": 3.0,
+        "8": 3.8,
+        "9": 6.7,
+        "10": 7.5,
+        "11": 7.5,
+        "12": 7.5,
+        "13": 6.7,
+        "14": 8.6,
+        "15": 10.0,
+        "16": 10.0,
+        "17": 10.0,
+        "18": 12.0,
+        "19": 15.0,
+        "20": 15.0,
+        "21": 15.0,
+        "22": 30.0,
+        "23": 30.0
+      }
+    }
+  },
+  {
+    "route_id": "Q07",
+    "route_name": "Q7",
+    "route_long_name": "Cypress Hills - Rockaway Blvd - Jfk Travel Plz.",
+    "agency": "MTA Bus Company",
+    "gtfs_source": "gtfs_busco",
+    "covered_zones": [
+      {
+        "location_id": 10,
+        "zone": "Baisley Park",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 63,
+        "zone": "Cypress Hills",
+        "borough": "Brooklyn"
+      },
+      {
+        "location_id": 132,
+        "zone": "JFK Airport",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 180,
+        "zone": "Ozone Park",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 216,
+        "zone": "South Ozone Park",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 218,
+        "zone": "Springfield Gardens North",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 219,
+        "zone": "Springfield Gardens South",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 258,
+        "zone": "Woodhaven",
+        "borough": "Queens"
+      }
+    ],
+    "headway_min": {
+      "peak": 11.4,
+      "offpeak": 20.4,
+      "by_hour": {
+        "0": 30.0,
+        "1": 30.0,
+        "2": 30.0,
+        "3": 30.0,
+        "4": 30.0,
+        "5": 30.0,
+        "6": 15.0,
+        "7": 10.0,
+        "8": 10.0,
+        "9": 12.0,
+        "10": 20.0,
+        "11": 20.0,
+        "12": 15.0,
+        "13": 20.0,
+        "14": 12.0,
+        "15": 10.0,
+        "16": 10.0,
+        "17": 10.0,
+        "18": 12.0,
+        "19": 20.0,
+        "20": 20.0,
+        "21": 20.0,
+        "22": 30.0,
+        "23": 30.0
+      }
+    }
+  },
+  {
+    "route_id": "Q10",
+    "route_name": "Q10",
+    "route_long_name": "Jfk Airtrain - Kew Gardens Via Rockaway",
+    "agency": "MTA Bus Company",
+    "gtfs_source": "gtfs_busco",
+    "covered_zones": [
+      {
+        "location_id": 132,
+        "zone": "JFK Airport",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 134,
+        "zone": "Kew Gardens",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 197,
+        "zone": "Richmond Hill",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 216,
+        "zone": "South Ozone Park",
+        "borough": "Queens"
+      }
+    ],
+    "headway_min": {
+      "peak": 9.1,
+      "offpeak": 13.8,
+      "by_hour": {
+        "0": 30.0,
+        "1": 30.0,
+        "2": 30.0,
+        "3": 30.0,
+        "4": 20.0,
+        "5": 15.0,
+        "6": 7.5,
+        "7": 8.6,
+        "8": 8.6,
+        "9": 10.0,
+        "10": 10.0,
+        "11": 10.0,
+        "12": 10.0,
+        "13": 10.0,
+        "14": 10.0,
+        "15": 7.5,
+        "16": 8.6,
+        "17": 8.6,
+        "18": 10.0,
+        "19": 10.0,
+        "20": 10.0,
+        "21": 20.0,
+        "22": 30.0,
+        "23": 30.0
+      }
+    }
+  },
+  {
+    "route_id": "Q113",
+    "route_name": "Q113",
+    "route_long_name": "Far Rockaway - Jamaica Limited",
+    "agency": "MTA Bus Company",
+    "gtfs_source": "gtfs_busco",
+    "covered_zones": [
+      {
+        "location_id": 10,
+        "zone": "Baisley Park",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 28,
+        "zone": "Briarwood/Jamaica Hills",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 86,
+        "zone": "Far Rockaway",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 130,
+        "zone": "Jamaica",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 132,
+        "zone": "JFK Airport",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 203,
+        "zone": "Rosedale",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 215,
+        "zone": "South Jamaica",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 218,
+        "zone": "Springfield Gardens North",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 219,
+        "zone": "Springfield Gardens South",
+        "borough": "Queens"
+      }
+    ],
+    "headway_min": {
+      "peak": 21.0,
+      "offpeak": 23.5,
+      "by_hour": {
+        "5": 60.0,
+        "6": 15.0,
+        "7": 20.0,
+        "8": 20.0,
+        "9": 30.0,
+        "10": 20.0,
+        "11": 30.0,
+        "12": 20.0,
+        "13": 30.0,
+        "14": 20.0,
+        "15": 20.0,
+        "16": 20.0,
+        "17": 15.0,
+        "18": 30.0,
+        "19": 20.0,
+        "20": 30.0
+      }
+    }
+  },
+  {
+    "route_id": "Q114",
+    "route_name": "Q114",
+    "route_long_name": "Far Rockaway - Jamaica Rush",
+    "agency": "MTA Bus Company",
+    "gtfs_source": "gtfs_busco",
+    "covered_zones": [
+      {
+        "location_id": 10,
+        "zone": "Baisley Park",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 28,
+        "zone": "Briarwood/Jamaica Hills",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 86,
+        "zone": "Far Rockaway",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 130,
+        "zone": "Jamaica",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 132,
+        "zone": "JFK Airport",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 203,
+        "zone": "Rosedale",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 215,
+        "zone": "South Jamaica",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 218,
+        "zone": "Springfield Gardens North",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 219,
+        "zone": "Springfield Gardens South",
+        "borough": "Queens"
+      }
+    ],
+    "headway_min": {
+      "peak": 20.0,
+      "offpeak": 23.2,
+      "by_hour": {
+        "0": 30.0,
+        "1": 30.0,
+        "2": 30.0,
+        "3": 30.0,
+        "4": 20.0,
+        "5": 20.0,
+        "6": 20.0,
+        "7": 15.0,
+        "8": 30.0,
+        "9": 20.0,
+        "10": 30.0,
+        "11": 20.0,
+        "12": 30.0,
+        "13": 20.0,
+        "14": 30.0,
+        "15": 20.0,
+        "16": 20.0,
+        "17": 15.0,
+        "18": 20.0,
+        "19": 30.0,
+        "20": 20.0,
+        "21": 12.0,
+        "22": 30.0,
+        "23": 30.0
+      }
+    }
+  },
+  {
+    "route_id": "Q80",
+    "route_name": "Q80",
+    "route_long_name": "Jfk Airtrain - Kew Gardens Via Lefferts",
+    "agency": "MTA Bus Company",
+    "gtfs_source": "gtfs_busco",
+    "covered_zones": [
+      {
+        "location_id": 132,
+        "zone": "JFK Airport",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 134,
+        "zone": "Kew Gardens",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 197,
+        "zone": "Richmond Hill",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 216,
+        "zone": "South Ozone Park",
+        "borough": "Queens"
+      }
+    ],
+    "headway_min": {
+      "peak": 10.8,
+      "offpeak": 17.6,
+      "by_hour": {
+        "0": 30.0,
+        "1": 30.0,
+        "2": 30.0,
+        "3": 30.0,
+        "4": 20.0,
+        "5": 15.0,
+        "6": 10.0,
+        "7": 10.0,
+        "8": 10.0,
+        "9": 15.0,
+        "10": 15.0,
+        "11": 15.0,
+        "12": 15.0,
+        "13": 15.0,
+        "14": 15.0,
+        "15": 10.0,
+        "16": 10.0,
+        "17": 10.0,
+        "18": 10.0,
+        "19": 12.0,
+        "20": 15.0,
+        "21": 20.0,
+        "22": 30.0,
+        "23": 30.0
+      }
+    }
+  },
+  {
+    "route_id": "Q3",
+    "route_name": "Q3",
+    "route_long_name": "Jamaica - JFK Airport",
+    "agency": "MTA New York City Transit",
+    "gtfs_source": "gtfs_q",
+    "covered_zones": [
+      {
+        "location_id": 122,
+        "zone": "Hollis",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 130,
+        "zone": "Jamaica",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 131,
+        "zone": "Jamaica Estates",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 132,
+        "zone": "JFK Airport",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 205,
+        "zone": "Saint Albans",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 218,
+        "zone": "Springfield Gardens North",
+        "borough": "Queens"
+      },
+      {
+        "location_id": 219,
+        "zone": "Springfield Gardens South",
+        "borough": "Queens"
+      }
+    ],
+    "headway_min": {
+      "peak": 9.3,
+      "offpeak": 13.1,
+      "by_hour": {
+        "0": 20.0,
+        "1": 30.0,
+        "2": 30.0,
+        "3": 30.0,
+        "4": 12.0,
+        "5": 12.0,
+        "6": 8.6,
+        "7": 6.0,
+        "8": 12.0,
+        "9": 10.0,
+        "10": 10.0,
+        "11": 10.0,
+        "12": 10.0,
+        "13": 10.0,
+        "14": 10.0,
+        "15": 10.0,
+        "16": 10.0,
+        "17": 10.0,
+        "18": 10.0,
+        "19": 10.0,
+        "20": 12.0,
+        "21": 15.0,
+        "22": 15.0,
+        "23": 20.0
+      }
+    }
+  }
+]
