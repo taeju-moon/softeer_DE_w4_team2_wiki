@@ -1,0 +1,109 @@
+# =====================================================
+# Spark Standalone Cluster
+#   - spark-master : 클러스터 마스터 
+#   - spark-worker-1, spark-worker-2 : 실제 작업(task)을 실행하는 워커
+#
+# 실행: docker-compose up -d --build
+# 종료: docker-compose down
+# =====================================================
+
+version: "3.9"
+
+services:
+
+  spark-master:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: spark-master
+    hostname: spark-master
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    command: >
+      bash -c "start-master.sh -h spark-master -p 7077 --webui-port 8080 && tail -f /opt/spark/logs/*.out"
+    ports:
+      - "7077:7077"   # 클러스터 통신 포트 (worker/spark-submit이 접속)
+      - "8080:8080"   # Spark Master Web UI
+    volumes:
+      - ./jobs:/opt/spark-apps       # pi.py 등 job 스크립트
+      - ./data:/opt/spark-data       # 입력/출력 데이터
+      - ./logs/master:/opt/spark/logs
+      - ./output:/opt/spark-output
+    networks:
+      - spark-net
+
+  spark-worker-1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: spark-worker-1
+    hostname: spark-worker-1
+    depends_on:
+      spark-master:
+        condition: service_healthy
+    command: >
+      bash -c "start-worker.sh spark://spark-master:7077 --webui-port 8081 && tail -f /opt/spark/logs/*.out"
+    ports:
+      - "8081:8081"   # Worker1 Web UI
+    volumes:
+      - ./jobs:/opt/spark-apps
+      - ./data:/opt/spark-data
+      - ./output:/opt/spark-output
+      - ./logs/worker1:/opt/spark/logs
+    environment:
+      - SPARK_WORKER_CORES=2
+      - SPARK_WORKER_MEMORY=4g
+    networks:
+      - spark-net
+
+  spark-worker-2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: spark-worker-2
+    hostname: spark-worker-2
+    depends_on:
+      spark-master:
+        condition: service_healthy
+    command: >
+      bash -c "start-worker.sh spark://spark-master:7077 --webui-port 8082 && tail -f /opt/spark/logs/*.out"
+    ports:
+      - "8082:8082"   # Worker2 Web UI
+    volumes:
+      - ./jobs:/opt/spark-apps
+      - ./data:/opt/spark-data
+      - ./output:/opt/spark-output
+      - ./logs/worker2:/opt/spark/logs
+    environment:
+      - SPARK_WORKER_CORES=2
+      - SPARK_WORKER_MEMORY=4g
+    networks:
+      - spark-net
+
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile.jupyter
+    container_name: jupyter
+    hostname: jupyter
+    depends_on:
+      spark-master:
+        condition: service_healthy
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/home/jovyan/work
+      - ./data:/opt/spark-data       # spark-submit과 동일 경로로 맞춤
+      - ./output:/opt/spark-output
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - GRANT_SUDO=yes
+    networks:
+      - spark-net
+
+networks:
+  spark-net:
+    driver: bridge

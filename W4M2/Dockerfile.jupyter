@@ -1,0 +1,9 @@
+# =====================================================
+# Jupyter (분석/시각화) 이미지
+#   jupyter/pyspark-notebook 베이스에 GTFS/지리 클러스터링용
+#   추가 패키지(requirements.txt)를 설치한다
+# =====================================================
+FROM jupyter/pyspark-notebook:spark-3.5.0
+
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt

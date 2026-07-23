@@ -1,0 +1,20 @@
+# Jupyter 컨테이너(분석/시각화)용 추가 패키지
+# master/worker(Spark 클러스터) Dockerfile에는 반영하지 않음 — 역할 분리 참고
+
+# GTFS 파싱 (routes.txt, stops.txt, stop_times.txt 등)
+gtfs-kit
+partridge
+
+# 지리적 클러스터링
+scikit-learn
+geopandas
+shapely
+pyproj
+fiona
+
+# Parquet 및 Spark<->pandas 변환
+pyarrow
+
+# 시각화
+matplotlib
+seaborn
